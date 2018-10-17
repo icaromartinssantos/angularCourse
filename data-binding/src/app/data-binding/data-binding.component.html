@@ -1,0 +1,83 @@
+<section class="property-binding">
+
+    <!-- <article>
+        <h3>Interpolation/ Intepolação</h3>
+        <p>String renderizada com interpolação: {{url}}</p>
+        <p>Resultado de 1 + 1 é: {{1+1}}</p>
+        <p>Resultado de 1 + 1 é: {{1+1+getValor()}}</p>
+        <p>Curso de Angular e gosto do curso:{{cursoAngular && getCurtirCurso()}}</p>
+    </article>
+
+    <article>
+        <h3>Property Binding</h3>
+        <img src="{{urlImagem}}" width="300" height="200">
+        <img [src]="urlImagem" width="300" height="200">
+        <img bind-src="urlImagem">
+    </article>
+
+    <article>
+        <h3>Class e Style Binding</h3>
+        <div>
+            Selecione uma classe:
+            Criei uma classe com #nomeDaViavel e passei um evento de (change)
+            <select #classe (change)="0">
+              <option value="alert-success">Sucesso   </option>
+              <option value="alert-info">   Informação</option>
+              <option value="alert-warning">Atenção   </option>
+              <option value="alert-danger"> Perigo     </option>
+            </select>
+            <br><br>
+
+            <div class="alert {{classe.value}}">
+                Texto colorido conforme valor do combobox.
+            </div>
+
+
+            <div class="alert " [class.alert-success]="classe.value == 'alert-success'" role="alert">Sucesso </div>
+            <div class="alert " [class.alert-info]="classe.value == 'alert-info'" role="alert">Informação</div>
+            <div class="alert " [class.alert-warning]="classe.value == 'alert-warning'" role="alert">Atenção </div>
+            <div class="alert " [class.alert-danger]="classe.value == 'alert-danger'" role="alert">Perigo </div>
+
+            <div class="alert alert-danger" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+                Esse texto somente aparece em caso de erro.
+            </div>
+
+
+        </div>
+    </article>
+
+</section>
+
+    <section class="event-binding">
+        <article>
+            <h3>Event binding</h3>
+            <div>
+                <button (click)="botaoClicado()" class="btn btn-primary">
+                    Me clique!
+                </button>
+            </div>
+            <br><br>
+
+            <input type="text" (keyup)="OnKeyUp($event)" (keyup.enter)="salvarValor(campoInput.value)" (blur)="salvarValor(campoInput.value)" #campoInput>
+            <p>Valor atual: {{valorAtual}}</p>
+            <p>Valor salvo: {{valorSalvo}}</p>
+
+            <br><br>
+
+            <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]="isMouseOver">
+                passe o mouse sobre mim
+            </span>
+        </article>
+    </section>
+
+    <app-meu-form></app-meu-form>-->
+
+    <section>
+        <article>
+            <h3>
+                Input/Output properties
+            </h3>
+
+            <app-curso [nome]="nomeDoCurso"></app-curso>
+        </article>
+    </section>

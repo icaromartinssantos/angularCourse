@@ -1,0 +1,25 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav style=" background-color:rgb(6, 6, 121)" class="sidenav" fixedInViewport="true" mode='side' opened='true'>
+        <mat-toolbar style="height:80px;" color="primary">
+            <img width="40px" height="60px" src="../../assets/img/nerd-155841_640.png">
+            <span class="title-style">FredForm</span>
+        </mat-toolbar>
+        <mat-nav-list>
+            <mat-list *ngFor="let itenMenu of itensMenu">
+                <mat-list-item style="color:white; ">
+                    <button style="width: 200px; text-align: left" mat-button>
+                        <mat-icon mat-list-icon>{{itenMenu.icon}}</mat-icon>
+                        {{itenMenu.nome}}
+                    </button>
+                </mat-list-item>
+            </mat-list>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary" style="height:80px;">
+        </mat-toolbar>
+        <mat-card>
+            <app-inicio></app-inicio>
+        </mat-card>
+    </mat-sidenav-content>
+</mat-sidenav-container>
