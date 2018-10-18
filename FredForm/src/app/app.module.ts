@@ -8,6 +8,12 @@ import { InicioComponent } from './inicio/inicio.component';
 import { MyNavComponent } from './my-nav/my-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { LayoutComponent } from './layout/layout.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { NgbModule, NgbPaginationModule, NgbAlertModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { DragAndDropModule } from 'angular-draggable-droppable';
+import { FlatpickrModule } from 'angularx-flatpickr';
 
 @NgModule({
   declarations: [
@@ -28,7 +34,18 @@ import { LayoutComponent } from './layout/layout.component';
     MatIconModule,
     MatCardModule,
     MatGridListModule,
-    LayoutModule
+    LayoutModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    }),
+    NgbModule,
+    NgbPaginationModule,
+    NgbAlertModule,
+    FormsModule,
+    NgbModalModule,
+    DragAndDropModule,
+    FlatpickrModule.forRoot()
   ],
   exports: [MatButtonModule, MatCheckboxModule],
   providers: [],
