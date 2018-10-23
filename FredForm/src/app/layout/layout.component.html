@@ -7,7 +7,7 @@
         <mat-nav-list>
             <mat-list *ngFor="let itenMenu of itensMenu">
                 <mat-list-item style="color:white; ">
-                    <button style="width: 200px; text-align: left" mat-button>
+                    <button routerLink="{{itenMenu.rota}}" (click)="capturaTituloPargina(itenMenu.nome)" routerLinkActive="active" style="width: 200px; text-align: left" mat-button>
                         <mat-icon mat-list-icon>{{itenMenu.icon}}</mat-icon>
                         {{itenMenu.nome}}
                     </button>
@@ -17,10 +17,10 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <mat-toolbar style="height:80px;  background-color: darkblue;">
-            <h3 style="color:white;font-family:Verdana, Geneva, Tahoma, sans-serif">Apontamento</h3>
+            <h3 style="color:white;font-family:Verdana, Geneva, Tahoma, sans-serif">{{titulo}}</h3>
         </mat-toolbar>
         <mat-card>
-            <app-inicio></app-inicio>
+            <router-outlet></router-outlet>
         </mat-card>
     </mat-sidenav-content>
 </mat-sidenav-container>

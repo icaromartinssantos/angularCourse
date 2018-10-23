@@ -1,0 +1,14 @@
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoApp.deps.json
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoApp.runtimeconfig.json
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoApp.runtimeconfig.dev.json
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoApp.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\obj\Debug\netcoreapp2.1\ApontamentoApp.csprojAssemblyReference.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\obj\Debug\netcoreapp2.1\ApontamentoApp.csproj.CoreCompileInputs.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\obj\Debug\netcoreapp2.1\ApontamentoApp.RazorAssemblyInfo.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\obj\Debug\netcoreapp2.1\ApontamentoApp.RazorAssemblyInfo.cs
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\obj\Debug\netcoreapp2.1\ApontamentoApp.AssemblyInfoInputs.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\obj\Debug\netcoreapp2.1\ApontamentoApp.AssemblyInfo.cs
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\obj\Debug\netcoreapp2.1\ApontamentoApp.RazorTargetAssemblyInfo.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoApp.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\obj\Debug\netcoreapp2.1\ApontamentoApp.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\obj\Debug\netcoreapp2.1\ApontamentoApp.pdb

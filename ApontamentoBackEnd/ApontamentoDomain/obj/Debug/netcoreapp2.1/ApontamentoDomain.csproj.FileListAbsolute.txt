@@ -1,0 +1,9 @@
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoDomain\bin\Debug\netcoreapp2.1\ApontamentoDomain.deps.json
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoDomain\bin\Debug\netcoreapp2.1\ApontamentoDomain.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoDomain\bin\Debug\netcoreapp2.1\ApontamentoDomain.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoDomain\obj\Debug\netcoreapp2.1\ApontamentoDomain.csprojAssemblyReference.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoDomain\obj\Debug\netcoreapp2.1\ApontamentoDomain.csproj.CoreCompileInputs.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoDomain\obj\Debug\netcoreapp2.1\ApontamentoDomain.AssemblyInfoInputs.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoDomain\obj\Debug\netcoreapp2.1\ApontamentoDomain.AssemblyInfo.cs
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoDomain\obj\Debug\netcoreapp2.1\ApontamentoDomain.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoDomain\obj\Debug\netcoreapp2.1\ApontamentoDomain.pdb

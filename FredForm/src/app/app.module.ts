@@ -1,21 +1,29 @@
+import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatToolbarModule, MatSidenavModule, MatMenuModule, MatListModule, MatIconModule, MatCardModule, MatGridListModule, MatTableModule, MatInputModule} from '@angular/material';
-import { InicioComponent } from './inicio/inicio.component';
+import { ApontamentoComponent } from './apontamento/apontamento.component';
 import { MyNavComponent } from './my-nav/my-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { LayoutComponent } from './layout/layout.component';
 import { NgbModule, NgbPaginationModule, NgbAlertModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { MomentModule } from 'ngx-moment';
+import { MomentModule } from 'angular2-moment';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { AppRoutingModule } from './app-routing.module';
+
+
+const routes: Routes = [
+  { path: 'apontamento', component: ApontamentoComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    InicioComponent,
+    ApontamentoComponent,
     MyNavComponent,
     LayoutComponent
   ],
@@ -39,10 +47,15 @@ import { MomentModule } from 'ngx-moment';
     NgbModalModule,
     MatTableModule,
     MomentModule,
-    MatInputModule
+    MatInputModule,
+    MatPaginatorModule,
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   exports: [MatButtonModule, MatCheckboxModule],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
