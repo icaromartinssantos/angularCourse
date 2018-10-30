@@ -1,0 +1,14 @@
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\obj\Debug\netcoreapp2.1\ApontamentoRepository.csprojAssemblyReference.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\obj\Debug\netcoreapp2.1\ApontamentoRepository.csproj.CoreCompileInputs.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\obj\Debug\netcoreapp2.1\ApontamentoRepository.AssemblyInfoInputs.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\obj\Debug\netcoreapp2.1\ApontamentoRepository.AssemblyInfo.cs
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\bin\Debug\netcoreapp2.1\ApontamentoRepository.deps.json
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\bin\Debug\netcoreapp2.1\ApontamentoRepository.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\bin\Debug\netcoreapp2.1\ApontamentoRepository.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\obj\Debug\netcoreapp2.1\ApontamentoRepository.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\obj\Debug\netcoreapp2.1\ApontamentoRepository.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\bin\Debug\netcoreapp2.1\ApontamentoDomain.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\bin\Debug\netcoreapp2.1\ApontamentoInfrastructure.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\bin\Debug\netcoreapp2.1\ApontamentoInfrastructure.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\bin\Debug\netcoreapp2.1\ApontamentoDomain.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoRepository\obj\Debug\netcoreapp2.1\ApontamentoRepository.csproj.CopyComplete

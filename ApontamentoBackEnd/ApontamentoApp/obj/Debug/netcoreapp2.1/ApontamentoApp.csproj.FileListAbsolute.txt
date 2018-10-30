@@ -12,3 +12,13 @@ C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\obj\Debug
 C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoApp.pdb
 C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\obj\Debug\netcoreapp2.1\ApontamentoApp.dll
 C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\obj\Debug\netcoreapp2.1\ApontamentoApp.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoDomain.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoInfrastructure.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoInfrastructure.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoDomain.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\obj\Debug\netcoreapp2.1\ApontamentoApp.csproj.CopyComplete
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\config.json
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoBusiness.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoRepository.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoBusiness.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoApp\bin\Debug\netcoreapp2.1\ApontamentoRepository.pdb

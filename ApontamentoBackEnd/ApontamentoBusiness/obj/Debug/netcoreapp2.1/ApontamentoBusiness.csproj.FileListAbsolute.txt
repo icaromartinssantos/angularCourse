@@ -1,0 +1,16 @@
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\bin\Debug\netcoreapp2.1\ApontamentoBusiness.deps.json
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\bin\Debug\netcoreapp2.1\ApontamentoBusiness.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\bin\Debug\netcoreapp2.1\ApontamentoBusiness.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\bin\Debug\netcoreapp2.1\ApontamentoDomain.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\bin\Debug\netcoreapp2.1\ApontamentoInfrastructure.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\bin\Debug\netcoreapp2.1\ApontamentoRepository.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\bin\Debug\netcoreapp2.1\ApontamentoRepository.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\bin\Debug\netcoreapp2.1\ApontamentoDomain.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\bin\Debug\netcoreapp2.1\ApontamentoInfrastructure.pdb
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\obj\Debug\netcoreapp2.1\ApontamentoBusiness.csprojAssemblyReference.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\obj\Debug\netcoreapp2.1\ApontamentoBusiness.csproj.CoreCompileInputs.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\obj\Debug\netcoreapp2.1\ApontamentoBusiness.AssemblyInfoInputs.cache
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\obj\Debug\netcoreapp2.1\ApontamentoBusiness.AssemblyInfo.cs
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\obj\Debug\netcoreapp2.1\ApontamentoBusiness.csproj.CopyComplete
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\obj\Debug\netcoreapp2.1\ApontamentoBusiness.dll
+C:\Users\Icaro\Desktop\AngularCourse\ApontamentoBackEnd\ApontamentoBusiness\obj\Debug\netcoreapp2.1\ApontamentoBusiness.pdb
