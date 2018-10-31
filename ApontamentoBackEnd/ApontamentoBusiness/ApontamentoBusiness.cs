@@ -1,4 +1,5 @@
 ﻿using ApontamentoDomain.Entity;
+using ApontamentoInfrastructure;
 using ApontamentoRepository;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,14 @@ namespace ApontamentoBusiness
 {
     public class ApontamentoUsuarioBusiness
     {
-        private readonly GenericRepository<ApontamentoUsuario> _Repository;
+        public readonly MyDbContext ctx;
+        public readonly GenericRepository<ApontamentoUsuario> _Repository;
+
+        public ApontamentoUsuarioBusiness(MyDbContext ctx)
+        {
+            this.ctx = ctx;
+            _Repository = new GenericRepository<ApontamentoUsuario>(ctx);
+        }
 
         public bool GravaApontamento(ApontamentoUsuario entity)
         {

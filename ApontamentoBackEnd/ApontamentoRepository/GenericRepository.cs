@@ -10,7 +10,7 @@ namespace ApontamentoRepository
     public class GenericRepository<TEntity> : IGenericRepository<TEntity>
         where TEntity : class
     {
-        private readonly MyDbContext _dbContext;
+        internal MyDbContext _dbContext;
         public GenericRepository(MyDbContext dbContext)
         {
             _dbContext = dbContext; 
@@ -18,9 +18,9 @@ namespace ApontamentoRepository
 
         public bool Create(TEntity entity)
         {
-            var ok = _dbContext.Add(entity).Collections.Count() > 0? true:false;
+            _dbContext.Add(entity);
 
-            return ok;
+            return Save();
 
         }
 
@@ -29,7 +29,7 @@ namespace ApontamentoRepository
             var entity = _dbContext.Find<TEntity>(id);
 
             var ok = _dbContext.Remove(entity);
-
+            Save();
             return ok.Collections.Count();
         }
 
@@ -53,13 +53,15 @@ namespace ApontamentoRepository
         public int Update(TEntity entity)
         {
             var ok = _dbContext.Update(entity);
-
+            Save();
             return ok.Collections.Count();
         }
 
-        public void Save()
+        public bool Save()
         {
-            _dbContext.SaveChanges();
+            var ok = _dbContext.SaveChanges() > 0? true:false;
+
+            return ok;
         }
     }
 }
