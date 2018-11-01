@@ -23,6 +23,15 @@ namespace ApontamentoApp.Controllers
             _Business = new ApontamentoUsuarioBusiness(ctx);
         }
 
+        // GET: api/<controller>
+        [HttpGet]
+        public List<ApontamentoUsuario> ConsultaTodosApontamentos()
+        {
+            var ok = _Business.ConsultaTodosApontamentos();
+
+            return ok.ToList();
+        }
+
         // POST: api/<controller>
         [HttpPost]
         public bool GravaApontamento([FromBody]ApontamentoUsuario entity)

@@ -3,6 +3,7 @@ using ApontamentoInfrastructure;
 using ApontamentoRepository;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ApontamentoBusiness
@@ -16,6 +17,14 @@ namespace ApontamentoBusiness
         {
             this.ctx = ctx;
             _Repository = new GenericRepository<ApontamentoUsuario>(ctx);
+        }
+
+
+        public IQueryable<ApontamentoUsuario> ConsultaTodosApontamentos()
+        {
+            var ok = _Repository.GetAll();
+
+            return ok;
         }
 
         public bool GravaApontamento(ApontamentoUsuario entity)
