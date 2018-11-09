@@ -27,9 +27,6 @@ namespace ApontamentoInfrastructure
             return base.SaveChanges();
         }
 
-        public object Set<T>()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

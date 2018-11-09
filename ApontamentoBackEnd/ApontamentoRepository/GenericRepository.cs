@@ -35,7 +35,7 @@ namespace ApontamentoRepository
 
         public IQueryable<TEntity> GetAll()
         {
-            IQueryable<TEntity> query = _dbContext.Query<TEntity>();
+            var query = _dbContext.Set<TEntity>().AsNoTracking();
 
             return query;
         }

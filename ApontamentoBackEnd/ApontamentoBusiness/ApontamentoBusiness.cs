@@ -1,6 +1,7 @@
 ﻿using ApontamentoDomain.Entity;
 using ApontamentoInfrastructure;
 using ApontamentoRepository;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
