@@ -59,6 +59,7 @@ namespace ApontamentoApp
             }
 
             app.UseMvc();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
         }
     }
 }

@@ -1,5 +1,8 @@
+import { element } from 'protractor';
+import { ApiService } from './../api.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
+
 
 
 export interface PeriodicElement {
@@ -11,18 +14,7 @@ export interface PeriodicElement {
   fim: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {data: new Date(2018, 10, 2), dia: 'Segunda', inicio: '08:00', intervalo: '12:00', retorno: '13:30', fim: null },
-  {data: new Date(2018, 10, 3), dia: 'Terça',   inicio: '08:00', intervalo: '12:00', retorno: '13:30', fim: '17:30' },
-  {data: new Date(2018, 10, 4), dia: 'Quarta',  inicio: '08:00', intervalo: '12:00', retorno: '13:30', fim: '17:30' },
-  {data: new Date(2018, 10, 5), dia: 'Quinta',  inicio: '08:00', intervalo: '12:00', retorno: '13:30', fim: '17:30' },
-  {data: new Date(2018, 10, 6), dia: 'Sexta',   inicio: '08:00', intervalo: '12:00', retorno: '13:30', fim: '17:30' },
-  {data: new Date(2018, 10, 7), dia: 'Segunda', inicio: '08:00', intervalo: '12:00', retorno: '13:30', fim: '17:30' },
-  {data: new Date(2018, 10, 8), dia: 'Terça',   inicio: '08:00', intervalo: '12:00', retorno: '13:30', fim: '17:30' },
-  {data: new Date(2018, 10, 9), dia: 'Quarta',  inicio: '08:00', intervalo: '12:00', retorno: '13:30', fim: '17:30' },
-  {data: new Date(2018, 10, 10), dia: 'Quinta', inicio: '08:00', intervalo: '12:00', retorno: '13:30', fim: '17:30' },
-  {data: new Date(2018, 10, 11), dia: 'Sabado', inicio: '08:00', intervalo: '12:00', retorno: '13:30', fim: '17:30' }
-];
+
 
 @Component({
   selector: 'app-apontamento',
@@ -30,9 +22,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./apontamento.component.css']
 })
 export class ApontamentoComponent implements OnInit {
-
+  ELEMENT_DATA: PeriodicElement[];
   displayedColumns: string[] = ['data', 'dia', 'inicio', 'intervalo', 'retorno', 'fim'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  dataSource = new MatTableDataSource<PeriodicElement>(this.ELEMENT_DATA);
 
   timeControl: Date;
 
@@ -40,17 +32,27 @@ export class ApontamentoComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
     this.timeControl = new Date();
     this.temNovoApontamento = false;
+    this.ConsultaTodosApontamentos();
+
+  }
+
+  ConsultaTodosApontamentos()
+  {
+    this.apiService.ConsultaTodosApontamentos().subscribe((data: PeriodicElement[]) => {
+      this.ELEMENT_DATA = data;
+    });
+    console.log(this.ELEMENT_DATA);
   }
 
   novoApontamento()
   {
-      if(!(ELEMENT_DATA[0].data.toLocaleDateString() == this.timeControl.toLocaleDateString()))
+      if(!(this.ELEMENT_DATA[0].data.toLocaleDateString() == this.timeControl.toLocaleDateString()))
       {
            const apontamento: PeriodicElement = {data: new Date(),
                                                  dia: this.getDiaDaSemana(new Date().getDay()),
@@ -58,7 +60,7 @@ export class ApontamentoComponent implements OnInit {
                                                  intervalo: '12:00',
                                                  retorno: '13:30',
                                                  fim: '17:30'};
-            ELEMENT_DATA.unshift(apontamento);
+            this.ELEMENT_DATA.unshift(apontamento);
             this.dataSource._updateChangeSubscription();
             this.temNovoApontamento = true;
     }

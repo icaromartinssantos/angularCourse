@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { MomentModule } from 'angular2-moment';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -50,7 +51,8 @@ const routes: Routes = [
     MatInputModule,
     MatPaginatorModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   exports: [MatButtonModule, MatCheckboxModule],
   providers: [],
