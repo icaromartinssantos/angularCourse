@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using ApontamentoInfrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -44,7 +45,9 @@ namespace ApontamentoApp
             b.MigrationsAssembly("ApontamentoApp")));
 
             services.AddMvc();
+            services.AddCors();
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -58,8 +61,12 @@ namespace ApontamentoApp
                 app.UseHsts();
             }
 
+            app.UseCors(builder => builder.WithOrigins("http://localhost:4200"));
+            app.UseCors(option => option.AllowAnyMethod());
+            app.UseCors(option => option.AllowAnyHeader());
+
             app.UseMvc();
-            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
+            
         }
     }
 }

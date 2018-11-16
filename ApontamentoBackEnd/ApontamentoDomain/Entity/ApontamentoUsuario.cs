@@ -7,6 +7,7 @@ namespace ApontamentoDomain.Entity
         
         public string   CodEmpresa    { get; set; }
         public int      CodUsuario       { get; set; }
+        public DateTime apDate { get; set; }
         public DateTime ApInicio    { get; set; }
         public DateTime ApIntervalo { get; set; }
         public DateTime ApRetorno   { get; set; }

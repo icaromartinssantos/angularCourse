@@ -1,3 +1,4 @@
+import { ApiService } from './api.service';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -55,7 +56,7 @@ const routes: Routes = [
     HttpClientModule
   ],
   exports: [MatButtonModule, MatCheckboxModule],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

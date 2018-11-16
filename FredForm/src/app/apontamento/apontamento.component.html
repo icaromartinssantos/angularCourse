@@ -18,13 +18,13 @@
         <!-- Position Column -->
         <ng-container matColumnDef="data">
             <th mat-header-cell *matHeaderCellDef> Data </th>
-            <td mat-cell *matCellDef="let element"> <time>{{element.data | amDateFormat: 'DD/MM/YYYY'}}</time> </td>
+            <td mat-cell *matCellDef="let element"> <time>{{element.apDate | amDateFormat: 'DD/MM/YYYY'}}</time> </td>
         </ng-container>
 
-        <!-- Name Column -->
+        <!-- Name Column-->
         <ng-container matColumnDef="dia">
             <th mat-header-cell *matHeaderCellDef> Dia </th>
-            <td mat-cell *matCellDef="let element"> {{element.dia}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.apDia}}</td>
         </ng-container>
 
         <!-- Weight Column -->
@@ -32,7 +32,7 @@
             <th mat-header-cell *matHeaderCellDef> Inicio </th>
             <td mat-cell *matCellDef="let element">
                 <mat-form-field>
-                    <input [disabled]="timeControl.toLocaleDateString() === element.data.toLocaleDateString()? false:true" matInput value="element.inicio" type="time" [(ngModel)]="element.inicio">
+                    <input [disabled]="timeControl === element.apData? false:true" matInput value="element.apInicio" type="time" [(ngModel)]="element.apInicio">
                 </mat-form-field>
             </td>
         </ng-container>
@@ -42,7 +42,7 @@
             <th mat-header-cell *matHeaderCellDef> Intervalo </th>
             <td mat-cell *matCellDef="let element">
                 <mat-form-field>
-                    <input required [disabled]="timeControl.toLocaleDateString() === element.data.toLocaleDateString()? false:true" matInput value="element.intervalo" type="time" [(ngModel)]="element.intervalo">
+                    <input required [disabled]="timeControl === element.apData? false:true" matInput value="element.apIntervalo" type="time" [(ngModel)]="element.apIntervalo">
                 </mat-form-field>
             </td>
         </ng-container>
@@ -51,7 +51,7 @@
             <th mat-header-cell *matHeaderCellDef> Retorno </th>
             <td mat-cell *matCellDef="let element">
                 <mat-form-field>
-                    <input required [disabled]="timeControl.toLocaleDateString() === element.data.toLocaleDateString()? false:true" matInput value="element.retorno" type="time" [(ngModel)]="element.retorno">
+                    <input required [disabled]="timeControl === element.apData? false:true" matInput value="element.apRetorno" type="time" [(ngModel)]="element.apRetorno">
                 </mat-form-field>
             </td>
         </ng-container>
@@ -60,7 +60,7 @@
             <th mat-header-cell *matHeaderCellDef> Fim </th>
             <td mat-cell *matCellDef="let element">
                 <mat-form-field>
-                    <input required [disabled]="timeControl.toLocaleDateString() === element.data.toLocaleDateString()? false:true" matInput value="element.fim" type="time" [(ngModel)]="element.fim">
+                    <input required [disabled]="timeControl === element.apData? false:true" matInput value="element.apFim" type="time" [(ngModel)]="element.apFim">
 
                 </mat-form-field>
             </td>

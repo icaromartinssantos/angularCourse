@@ -1,3 +1,4 @@
+import { PeriodicElement } from './apontamento/apontamento.component';
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 
@@ -18,6 +19,13 @@ export class ApiService {
 
   ConsultaTodosApontamentos()
   {
+
     return this.httpClient.get(`${API_URL}/Apontamento`);
+  }
+
+  InserirApontamentos(entity: PeriodicElement)
+  {
+
+    return this.httpClient.post(`${API_URL}/Apontamento`, {body: entity});
   }
 }

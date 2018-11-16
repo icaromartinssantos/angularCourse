@@ -3,15 +3,15 @@ import { ApiService } from './../api.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
 
-
-
 export interface PeriodicElement {
-  dia: string;
-  data: Date;
-  inicio: string;
-  intervalo: string;
-  retorno: string;
-  fim: string;
+  codEmpresa  : string;
+  codUsuario  : number;
+  apData      : Date  ;
+  apInicio    : string;
+  apIntervalo : string;
+  apRetorno   : string;
+  apFim       : string;
+  apDia       : string;
 }
 
 
@@ -22,8 +22,11 @@ export interface PeriodicElement {
   styleUrls: ['./apontamento.component.css']
 })
 export class ApontamentoComponent implements OnInit {
+
   ELEMENT_DATA: PeriodicElement[];
+
   displayedColumns: string[] = ['data', 'dia', 'inicio', 'intervalo', 'retorno', 'fim'];
+
   dataSource = new MatTableDataSource<PeriodicElement>(this.ELEMENT_DATA);
 
   timeControl: Date;
@@ -39,35 +42,49 @@ export class ApontamentoComponent implements OnInit {
     this.timeControl = new Date();
     this.temNovoApontamento = false;
     this.ConsultaTodosApontamentos();
-
+    this.dataSource._updateChangeSubscription();
   }
 
-  ConsultaTodosApontamentos()
-  {
+  ConsultaTodosApontamentos() {
+
     this.apiService.ConsultaTodosApontamentos().subscribe((data: PeriodicElement[]) => {
+      data.forEach(d => {
+        d.apInicio = d.apInicio.substring(11, 16);
+        d.apIntervalo = d.apIntervalo.substring(11, 16);
+        d.apRetorno = d.apRetorno.substring(11, 16);
+        d.apFim = d.apFim.substring(11, 16);
+      });
       this.ELEMENT_DATA = data;
+      this.dataSource.data = this.ELEMENT_DATA;
+      console.log(this.dataSource.data);
     });
-    console.log(this.ELEMENT_DATA);
+
   }
 
   novoApontamento()
   {
-      if(!(this.ELEMENT_DATA[0].data.toLocaleDateString() == this.timeControl.toLocaleDateString()))
+      if (!(this.dataSource.data[0].apData === this.timeControl))
       {
-           const apontamento: PeriodicElement = {data: new Date(),
-                                                 dia: this.getDiaDaSemana(new Date().getDay()),
-                                                 inicio: '08:00',
-                                                 intervalo: '12:00',
-                                                 retorno: '13:30',
-                                                 fim: '17:30'};
+           const apontamento: PeriodicElement = {codEmpresa  : '01',
+                                                 codUsuario  : 1,
+                                                 apData      : this.timeControl,
+                                                 apInicio    : '',
+                                                 apIntervalo : '',
+                                                 apRetorno   : '',
+                                                 apFim       : '',
+                                                 apDia       : this.getDiaDaSemana(this.timeControl.getDay())};
             this.ELEMENT_DATA.unshift(apontamento);
+            this.dataSource.data = this.ELEMENT_DATA;
             this.dataSource._updateChangeSubscription();
             this.temNovoApontamento = true;
-    }
+      }
   }
 
   gravarApontamento()
   {
+    this.apiService.InserirApontamentos(this.dataSource.data[0]).subscribe((inseriu: Boolean) => {
+        console.log(inseriu);
+    });
     this.temNovoApontamento = false;
   }
 
