@@ -44,8 +44,8 @@ namespace ApontamentoApp
             services.AddDbContext<MyDbContext>(options => options.UseMySql(sqlConnection, b => 
             b.MigrationsAssembly("ApontamentoApp")));
 
-            services.AddMvc();
             services.AddCors();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1); ;
         }
 
 
@@ -61,10 +61,12 @@ namespace ApontamentoApp
                 app.UseHsts();
             }
 
-            app.UseCors(builder => builder.WithOrigins("http://localhost:4200"));
-            app.UseCors(option => option.AllowAnyMethod());
-            app.UseCors(option => option.AllowAnyHeader());
+            app.UseCors(builder => builder.AllowAnyMethod()
+                                          .AllowAnyOrigin()
+                                          .AllowAnyHeader()
+                                          .AllowCredentials());
 
+            app.UseHttpsRedirection();
             app.UseMvc();
             
         }
