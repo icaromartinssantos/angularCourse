@@ -2,16 +2,17 @@ import { element } from 'protractor';
 import { ApiService } from './../api.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
+import { empty } from 'rxjs';
 
 export interface PeriodicElement {
-  codEmpresa  : string;
-  codUsuario  : number;
-  apData      : Date  ;
-  apInicio    : string;
-  apIntervalo : string;
-  apRetorno   : string;
-  apFim       : string;
-  apDia       : string;
+  CodEmpresa  : string;
+  CodUsuario  : number;
+  apDate      : Date  ;
+  ApInicio    : string;
+  ApIntervalo : string;
+  ApRetorno   : string;
+  ApFim       : string;
+  ApDia       : string;
 }
 
 
@@ -47,12 +48,13 @@ export class ApontamentoComponent implements OnInit {
 
   ConsultaTodosApontamentos() {
 
-    this.apiService.ConsultaTodosApontamentos().subscribe((data: PeriodicElement[]) => {
+    this.apiService.ConsultaTodosApontamentos().subscribe((data: any[]) => {
       data.forEach(d => {
         d.apInicio = d.apInicio.substring(11, 16);
         d.apIntervalo = d.apIntervalo.substring(11, 16);
         d.apRetorno = d.apRetorno.substring(11, 16);
         d.apFim = d.apFim.substring(11, 16);
+        d.apDia =  d.apDate;
       });
       this.ELEMENT_DATA = data;
       this.dataSource.data = this.ELEMENT_DATA;
@@ -61,23 +63,20 @@ export class ApontamentoComponent implements OnInit {
 
   }
 
-  novoApontamento()
-  {
-      if (!(this.dataSource.data[0].apData === this.timeControl))
-      {
-           const apontamento: PeriodicElement = {codEmpresa  : '01',
-                                                 codUsuario  : 1,
-                                                 apData      : this.timeControl,
-                                                 apInicio    : '',
-                                                 apIntervalo : '',
-                                                 apRetorno   : '',
-                                                 apFim       : '',
-                                                 apDia       : this.getDiaDaSemana(this.timeControl.getDay())};
-            this.ELEMENT_DATA.unshift(apontamento);
-            this.dataSource.data = this.ELEMENT_DATA;
-            this.dataSource._updateChangeSubscription();
-            this.temNovoApontamento = true;
-      }
+  novoApontamento() {
+    if (this.dataSource.data[0] != null) {if (!(this.dataSource.data[0].apDate === this.timeControl)) {return null; }}
+    const apontamento: PeriodicElement = {CodEmpresa  : '01',
+                                          CodUsuario  : 1,
+                                          apDate      : this.timeControl,
+                                          ApInicio    : '08:00',
+                                          ApIntervalo : '12:00',
+                                          ApRetorno   : '13:30',
+                                          ApFim       : '17:30',
+                                          ApDia       : this.getDiaDaSemana(this.timeControl.getDay())};
+    this.ELEMENT_DATA.unshift(apontamento);
+    this.dataSource.data = this.ELEMENT_DATA;
+    this.dataSource._updateChangeSubscription();
+    this.temNovoApontamento = true;
   }
 
   gravarApontamento()

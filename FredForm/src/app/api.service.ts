@@ -26,6 +26,6 @@ export class ApiService {
   InserirApontamentos(entity: PeriodicElement)
   {
 
-    return this.httpClient.post(`${API_URL}/Apontamento`, {body: entity});
+    return this.httpClient.post(`${API_URL}/Apontamento`, entity);
   }
 }
